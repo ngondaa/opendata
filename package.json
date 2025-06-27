@@ -23,7 +23,10 @@
         "vue-tsc": "^2.2.4"
     },
     "dependencies": {
+        "@headlessui/vue": "^1.7.23",
+        "@heroicons/vue": "^2.2.0",
         "@inertiajs/vue3": "^2.0.0",
+        "@splinetool/runtime": "^1.10.15",
         "@tailwindcss/vite": "^4.1.1",
         "@vitejs/plugin-vue": "^5.2.1",
         "@vueuse/core": "^12.8.2",

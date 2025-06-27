@@ -4,7 +4,7 @@ use App\Http\Controllers\Socialite\ProviderRedirectController;
 use App\Http\Controllers\Socialite\ProviderCallbackController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
-use NunoMaduro\Collision\Provider;
+
 
 Route::get('/', function () {
     return Inertia::render('Welcome');

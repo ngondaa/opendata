@@ -7,25 +7,59 @@ import { type NavItem } from '@/types';
 import { Link } from '@inertiajs/vue3';
 import { BookOpen, Folder, LayoutGrid } from 'lucide-vue-next';
 import AppLogo from './AppLogo.vue';
+import NavRegular from './NavRegular.vue';
 
 const mainNavItems: NavItem[] = [
     {
-        title: 'Dashboard',
+        title: 'Home',
         href: '/dashboard',
         icon: LayoutGrid,
     },
+     {
+        title: 'Explore',
+        href: '/explore',
+        icon: BookOpen,
+    },
+
+    {
+        title: 'Upload',
+        href: '/uploada',
+        icon: Folder,
+    },
+   
 ];
+const sideBarItems:NavItem[] = [
+  
+     {
+        title: 'Explore',
+        href: '/explore',
+        icon: BookOpen,
+    },
+
+    {
+        title: 'Upload',
+        href: '/uploada',
+        icon: Folder,
+    },
+   
+];
+
+// Add padding style for the sidebar
+const sidebarPadding = 'p-2';
+
+
+
 
 const footerNavItems: NavItem[] = [
     {
-        title: 'Github Repo',
+        title: 'Starred Repos',
         href: 'https://github.com/laravel/vue-starter-kit',
-        icon: Folder,
+        icon: BookOpen,
     },
     {
-        title: 'Documentation',
+        title: 'Saved Files',
         href: 'https://laravel.com/docs/starter-kits#vue',
-        icon: BookOpen,
+        icon: Folder,
     },
 ];
 </script>
@@ -37,7 +71,7 @@ const footerNavItems: NavItem[] = [
                 <SidebarMenuItem>
                     <SidebarMenuButton size="lg" as-child>
                         <Link :href="route('dashboard')">
-                            <AppLogo />
+                        <AppLogo />
                         </Link>
                     </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -46,7 +80,10 @@ const footerNavItems: NavItem[] = [
 
         <SidebarContent>
             <NavMain :items="mainNavItems" />
+            
+            <NavRegular :items="sideBarItems" />
         </SidebarContent>
+       
 
         <SidebarFooter>
             <NavFooter :items="footerNavItems" />
